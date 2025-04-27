@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sys, requests
+import sys, requests, signal
 from termcolor import colored, cprint
 
 def handlerExit(sig, frame):
