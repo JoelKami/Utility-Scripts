@@ -23,7 +23,6 @@ function principalFuzz(){
   if [ "$statusCode" -ne "404" ]; then
     echo -e "$ruta\t[/$statusCode]"
   fi
-  sleep 1 # con el pool de procesos ya va bien, pero con esto controlamos mejor.
 }
 
 declare -i paramCounter=0; while getopts "u:w:h:" arg; do
@@ -50,6 +49,7 @@ else
   
     if [ $counter -ge $maxProcess ]; then
       wait
+      sleep 1 # sin esto ya va bien, pero así controlamos mejor.
       counter=0
     fi
   done < $dictionaryPath
