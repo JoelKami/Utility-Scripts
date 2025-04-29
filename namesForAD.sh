@@ -31,7 +31,7 @@ function format1() {
 }
 
 function format2() {
-	while IFS= read name; do
+    while IFS= read name; do
         namesMinus=$(echo $name | tr '[A-Z]' '[a-z]')
         firstNameLetter=$(echo $namesMinus | cut -d " " -f1 | head -c 1)
         lastName=$(echo $namesMinus | awk '{print $2}')
