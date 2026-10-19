@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# Description: script diseñado para visualizar de una mejor manera la información de los JSON del dump que hace la utilidad ldapdomaindump.
+
 import json, os
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer, Tree, Pretty, Static
